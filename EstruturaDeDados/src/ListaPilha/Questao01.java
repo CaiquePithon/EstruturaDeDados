@@ -27,35 +27,44 @@ public class Questao01 {
 			opcao = sc.nextInt();
 			
 			switch (opcao) {
-			case 1: {
+			case 1: 
 				System.out.println("Informe o nome do livro: ");
 				livros.push(sc.next());
 				break;
-			}
-			case 2: {
-				Iterator<String> it = livros.iterator();
-				while(it.hasNext()) {
-					System.out.println(it.next());
+			
+			case 2: 
+				
+				if(!livros.empty()) {
+					System.out.println("Esta é a sua pilha: ");
+					Iterator<String> it = livros.iterator();
+					while(it.hasNext()) {
+						System.out.println(it.next());
+					}
+					
+				}else {
+					System.out.println("Pilha  esta vazia");
 				}
-			}
-			case 3: {
+				
+				
+				break;
+			
+			case 3: 
 				System.out.println("Removendo...");
 				livros.pop();
 				break;
-			}
-			case 4: {
+			
+			case 4: 
 				System.out.println("Esvaziando... ");
 				livros.clear();
 				break;
-			}
-			case 5: {
+			
+			case 5: 
 				System.out.println("Saindo...");
 				break;
-			}
+			
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + opcao);
 			}
 		} while (opcao != 5);
-		
 	}
 }
