@@ -36,9 +36,14 @@ public class Questao01 {
 				
 				if(!livros.empty()) {
 					System.out.println("Esta é a sua pilha: ");
-					Iterator<String> it = livros.iterator();
+					/*Iterator<String> it = livros.iterator();
 					while(it.hasNext()) {
 						System.out.println(it.next());
+					}*/
+					
+					// IMPRESSÃO INVERTIDA... (CORRETA PARA PILHA)
+					for (int i = 1; livros.size()-i >= 0; i++) {
+						System.out.println(livros.get(livros.size()-i));
 					}
 					
 				}else {

@@ -32,6 +32,9 @@ public class Questao03 {
 				System.out.println(pilha.peek());
 				break;
 			case 3:
+				
+				System.out.println(pilha.get(0));
+				System.out.println(pilha.size());
 				System.out.println(pilha.get(pilha.size()-2));
 				
 				break;
