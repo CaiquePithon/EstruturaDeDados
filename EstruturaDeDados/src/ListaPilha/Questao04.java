@@ -20,16 +20,18 @@ public class Questao04 {
 		
 		System.out.println("Adicionando...\n");
 		
-		addElemente(pilha);
+		addElemente(pilha, "Google visitado");
+		addElemente(pilha, "Youtube visitado");
+		
 		
 		print(pilha);
-		
-		System.out.println("\nRemovendo...");
 		
 		removeElemente(pilha);
 		
 		print(pilha);
 		
+		removeElemente(pilha);
+		print(pilha);
 		}
 	
 	public static Stack<String> inicializarPilha() {
@@ -37,24 +39,22 @@ public class Questao04 {
 		return pilha;
 	}
 	
-	public static void addElemente(Stack<String> pilha) {
-		pilha.push("a");
+	public static void addElemente(Stack<String> pilha, String l) {
+		pilha.push(l);
 	}
 	
 	public static void removeElemente(Stack<String> pilha) {
+		System.out.println("\nRemovendo...");
 		pilha.pop();
 	}
 	
 	public static void print(Stack<String> pilha) {
-		Iterator <String> it = pilha.iterator();
-		
 		if(!pilha.empty()){
-			System.out.println("Essa é sua pilha: \n");
-			while(it.hasNext()) {
-				System.out.println(it.next());
+			for (int i = 1; pilha.size()-i >= 0; i++) {
+				System.out.println(pilha.get(pilha.size()-i));
 			}
 		}else {
-			System.out.println("\npilha vazia.");
+			System.out.println("\nnenhum site visitado");
 		}
 			
 	}

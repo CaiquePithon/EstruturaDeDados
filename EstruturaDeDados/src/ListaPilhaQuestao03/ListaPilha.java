@@ -1,4 +1,4 @@
-package ListaPilhaQuestao02;
+package ListaPilhaQuestao03;
 
 
 public class ListaPilha {
@@ -7,7 +7,7 @@ public class ListaPilha {
 	private Celula fim;
 	private Celula atual;
 	
-	public void adicionar(Letra dado) {
+	public void adicionar(Tarefa dado) {
 		Celula celula = new Celula();
 		celula.setDado(dado);
 		
@@ -16,8 +16,12 @@ public class ListaPilha {
 			fim = celula;
 			fim.setAnterior(inicio);
 		}else {
+			Celula aux = new Celula();
+			
 			fim.setProximo(celula);
+			fim = aux;
 			fim = celula;
+			fim.setAnterior(aux);
 			fim.setProximo(null);
 		}
 	}
@@ -77,12 +81,12 @@ public class ListaPilha {
 		return recuperarPenultimo(celula.getProximo());
 	}
 	
-	public Letra recuperar(Celula celula) {
-		if(celula.getProximo().equals(fim)) {
-			return celula.getDado();
+	private Celula recuperar(Celula celula) {
+		if(celula.getAnterior().equals(inicio)) {
+			return celula;
 		}
 		
-		return recuperar(celula.getProximo());
+		return recuperar(celula.getAnterior());
 	}
 	
 	public boolean verifVazia() {
