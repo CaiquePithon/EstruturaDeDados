@@ -47,7 +47,7 @@ public class TestaPilha {
 					break;
 				case 3:
 					if(lista.verifVazia()) {
-						System.out.println("Pilha vazia vazia");
+						System.out.println("Pilha esta vazia");
 					}else {
 						System.out.println("\nVamos ver a pilha de Livros:\n");
 						while (lista.temProximo()) {							

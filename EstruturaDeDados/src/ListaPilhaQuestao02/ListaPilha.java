@@ -14,7 +14,6 @@ public class ListaPilha {
 		if(inicio == null && fim == null) {
 			inicio = celula;
 			fim = celula;
-			fim.setAnterior(inicio);
 		}else {
 			fim.setProximo(celula);
 			fim = celula;
