@@ -20,17 +20,17 @@ public class Questao04 {
 		
 		System.out.println("Adicionando...\n");
 		
-		push(pilha, "Google visitado");
-		push(pilha, "Youtube visitado");
+		addElemente(pilha, "Google visitado");
+		addElemente(pilha, "Youtube visitado");
 		
 		
 		print(pilha);
 		
-		pop(pilha);
+		removeElemente(pilha);
 		
 		print(pilha);
 		
-		pop(pilha);
+		removeElemente(pilha);
 		print(pilha);
 		}
 	
@@ -39,11 +39,11 @@ public class Questao04 {
 		return pilha;
 	}
 	
-	public static void push(Stack<String> pilha, String l) {
+	public static void addElemente(Stack<String> pilha, String l) {
 		pilha.push(l);
 	}
 	
-	public static void pop(Stack<String> pilha) {
+	public static void removeElemente(Stack<String> pilha) {
 		System.out.println("\nRemovendo...");
 		pilha.pop();
 	}

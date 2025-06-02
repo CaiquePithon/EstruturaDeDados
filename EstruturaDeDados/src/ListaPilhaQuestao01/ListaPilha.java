@@ -14,9 +14,14 @@ public class ListaPilha {
 		if(inicio == null && fim == null) {
 			inicio = celula;
 			fim = celula;
+			fim.setAnterior(inicio);
 		}else {
+			Celula aux = new Celula();
+			
 			fim.setProximo(celula);
+			fim = aux;
 			fim = celula;
+			fim.setAnterior(aux);
 			fim.setProximo(null);
 		}
 	}

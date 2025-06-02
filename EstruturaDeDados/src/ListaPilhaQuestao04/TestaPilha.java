@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class TestaPilha {
 	public static void main(String[] args) {
 		TestaPilha testaLista = new TestaPilha();
-		ListaPilha pilha = new ListaPilha();
+		ListaPilha lista = new ListaPilha();
+		int opcao = 0;
 		boolean verifVazia = true;
-
+//
+		Scanner sc = new Scanner(System.in);
 
 		/*4. Projete uma estrutura do tipo pilha para guardar informações de páginas da
 		web visitadas.
@@ -16,27 +18,12 @@ public class TestaPilha {
 		c) Escreva a função pop para remover
 		*/
 		
-		testaLista.push(pilha, "Google visitado");
-		testaLista.push(pilha, "Youtube visitado");
-		
-		
-		testaLista.print(pilha);
-		
-		testaLista.pop(pilha);
-		
-		testaLista.print(pilha);
-		
-		testaLista.pop(pilha);
-		testaLista.print(pilha);
-	}
-	
-	
 
-	public void push(ListaPilha listaEncadeada, String l) {
-		System.out.println("Adicionando...");
-		
+	}
+
+	public void push(ListaPilha listaEncadeada) {
 		Site site = new Site();
-		site.nome = l;
+		
 		listaEncadeada.adicionar(site); 
 	}
 
@@ -50,18 +37,5 @@ public class TestaPilha {
 
 	}
 
-	public void print(ListaPilha lista) {
-		if(lista.verifVazia()) {
-			System.out.println("\nPilha esta vazia");
-		}else {
-			System.out.println("\nVamos ver a pilha de Livros:\n");
-			while (lista.temProximo()) {							
-				System.out.println(lista.getAtual().getDado().getNome());
-			}
-			
-			/*while (lista.temAnterior()) {							
-				System.out.println(lista.getAtual().getDado().getNome());
-			}*/
-		}
-	}
+	
 }
