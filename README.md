@@ -28,8 +28,8 @@ Os códigos aqui presentes foram desenvolvidos ao longo das aulas, servindo como
 
 ## 💻 Tecnologias Utilizadas
 
-- Linguagem principal: **(adicione aqui, ex: C, Java, Python, etc.)**  
-- IDE/Editor: **(opcional, ex: VS Code, IntelliJ, etc.)**
+- Linguagem principal: **(Java)**  
+- IDE/Editor: **(Eclipse)**
 
 ---
 
